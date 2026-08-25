@@ -2,12 +2,11 @@ const express = require("express");
 
 const app = express();
 
-app.use(express.json());
-
 const authRoutes = require("./routes/authRoutes");
+const adminRoutes = require("./routes/adminRoutes");
+const studentRoutes = require("./routes/studentRoutes");
 
-const protect = require("./middleware/authMiddleware");
-const authorize = require("./middleware/roleMiddleware");
+app.use(express.json());
 
 app.get("/", (req, res) => {
     res.json({
@@ -16,17 +15,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/auth", authRoutes);
-
-app.get(
-    "/api/admin/dashboard",
-    protect,
-    authorize("admin"),
-    (req, res) => {
-        res.json({
-            message: "Welcome to Admin Dashboard",
-            user: req.user
-        });
-    }
-);
+app.use("/api/admin", adminRoutes);
+app.use("/api/students", studentRoutes);
 
 module.exports = app;
