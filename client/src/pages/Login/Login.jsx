@@ -1,9 +1,18 @@
+import PageTitle from "../../components/ui/PageTitle";
+import Card from "../../components/ui/Card";
+import Button from "../../components/ui/Button";
+
 function Login() {
   return (
-    <div>
-      <h1>Login</h1>
-      <h2>Campus Connect Login</h2>
-      <p>Login page placeholder.</p>
+    <div className="page">
+      <PageTitle>Login</PageTitle>
+
+      <Card
+        title="Welcome Back"
+        description="Login to your Campus Connect account."
+      >
+        <Button>Login</Button>
+      </Card>
     </div>
   );
 }

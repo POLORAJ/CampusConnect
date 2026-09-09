@@ -1,7 +1,8 @@
 function Footer() {
   return (
-    <footer>
-      <p>© 2026 Campus Connect</p>
+    <footer className="footer">
+      <p>Campus Connect</p>
+      <p>© {new Date().getFullYear()} Campus Connect</p>
     </footer>
   );
 }

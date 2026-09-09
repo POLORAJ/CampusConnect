@@ -1,9 +1,15 @@
+import PageTitle from "../../components/ui/PageTitle";
+import Card from "../../components/ui/Card";
+
 function Profile() {
   return (
-    <div>
-      <h1>Profile</h1>
-      <h2>User Profile</h2>
-      <p>Profile page placeholder.</p>
+    <div className="page">
+      <PageTitle>Profile</PageTitle>
+
+      <Card
+        title="Student Profile"
+        description="View and manage your profile information."
+      />
     </div>
   );
 }

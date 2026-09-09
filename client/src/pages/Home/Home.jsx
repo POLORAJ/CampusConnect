@@ -1,9 +1,20 @@
+import PageTitle from "../../components/ui/PageTitle";
+import Card from "../../components/ui/Card";
+import Button from "../../components/ui/Button";
+
 function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-      <h2>Welcome to Campus Connect</h2>
-      <p>University Management System</p>
+    <div className="page">
+      <PageTitle>Campus Connect</PageTitle>
+
+      <Card
+        title="Welcome to Campus Connect"
+        description="A university management system for students and administrators."
+      >
+        <Button onClick={() => alert("Welcome to Campus Connect!")}>
+          Get Started
+        </Button>
+      </Card>
     </div>
   );
 }

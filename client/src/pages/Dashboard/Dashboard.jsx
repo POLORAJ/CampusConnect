@@ -1,9 +1,18 @@
+import PageTitle from "../../components/ui/PageTitle";
+import Card from "../../components/ui/Card";
+import Button from "../../components/ui/Button";
+
 function Dashboard() {
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <h2>Campus Connect Dashboard</h2>
-      <p>Dashboard page placeholder.</p>
+    <div className="page">
+      <PageTitle>Dashboard</PageTitle>
+
+      <Card
+        title="Student Dashboard"
+        description="Manage your academic information and activities."
+      >
+        <Button>View Details</Button>
+      </Card>
     </div>
   );
 }
