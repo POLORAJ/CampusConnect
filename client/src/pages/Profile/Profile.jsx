@@ -1,15 +1,20 @@
-import PageTitle from "../../components/ui/PageTitle";
-import Card from "../../components/ui/Card";
+import { useState } from "react";
 
 function Profile() {
-  return (
-    <div className="page">
-      <PageTitle>Profile</PageTitle>
+  const [name, setName] = useState("");
 
-      <Card
-        title="Student Profile"
-        description="View and manage your profile information."
+  return (
+    <div>
+      <h1>Profile</h1>
+
+      <input
+        type="text"
+        placeholder="Enter your name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
       />
+
+      <p>Your name: {name}</p>
     </div>
   );
 }

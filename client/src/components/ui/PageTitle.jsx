@@ -1,5 +1,10 @@
-function PageTitle({ children }) {
-  return <h1 className="page-title">{children}</h1>;
+function PageTitle({ title, description }) {
+  return (
+    <div className="page-title">
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </div>
+  );
 }
 
 export default PageTitle;
