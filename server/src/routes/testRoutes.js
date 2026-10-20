@@ -1,10 +1,10 @@
-const express = require("express");
 
+const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.json({
-    message: "Campus Connect backend is working successfully!",
+  res.status(200).json({
+    message: "Campus Connect backend is working successfully!"
   });
 });
 
